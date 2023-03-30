@@ -40,4 +40,3 @@ brother-hll2395dw
 virt-manager
 qemu-desktop
 dnsmasq
-iptables-nft

@@ -11,7 +11,7 @@ cd paru
 makepkg -si --noconfirm
 
 # Install Packages
-cd ~
+cd ~/dotfiles/.config/setup
 paru -Sy --needed --noconfirm - < packages.txt
 
 # Setup Shell
@@ -21,6 +21,7 @@ chsh -s /bin/zsh
 sudo systemctl enable --now cups.service
 
 # Setup Virtmanager
+paru -S iptables-nft
 sudo systemctl enable --now libvirtd.service
 sudo usermod -aG libvirt $USER
 sudo sed -i 's/^#unix_sock_group = .*/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
