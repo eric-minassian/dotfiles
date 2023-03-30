@@ -6,8 +6,7 @@ gnome-keyring
 neofetch
 htop
 wget
-virtualenv
-pulsemixer
+python-virtualenv
 nodejs
 npm
 qbittorrent
@@ -22,7 +21,7 @@ sway-audio-idle-inhibit-git
 swayidle
 swaylock
 waybar
-xorg-wayland
+xorg-xwayland
 xdg-utils
 brave-bin
 firefox
@@ -40,3 +39,4 @@ brother-hll2395dw
 virt-manager
 qemu-desktop
 dnsmasq
+fuse2
