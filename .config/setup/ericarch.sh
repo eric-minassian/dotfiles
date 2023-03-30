@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Move Dotfiles to Homefolder
+cd ~
+cp -rT ~/dotfiles ~
+
+# Setup AUR Helper (Paru)
+cd ~
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si --noconfirm
+
+# Install Packages
+cd ~
+paru -Sy --needed --noconfirm - < packages.txt
+
+# Setup Shell
+chsh -s /bin/zsh
+
+# Setup CUPS
+sudo systemctl enable --now cups.service
+
+# Setup Virtmanager
+sudo systemctl enable --now libvirtd.service
+sudo usermod -aG libvirt $USER
+sudo sed -i 's/^#unix_sock_group = .*/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
+sudo sed -i 's/^#unix_sock_rw_perms = .*/unix_sock_rw_perms = "0770"/' /etc/libvirt/libvirtd.conf
+sudo sed -i "s/#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
+sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.conf
+
+# Setup RClone
+cd ~
+mkdir Drive
+rclone config create Drive drive
+systemctl --user enable --now rclone@Drive
+
+# Setup Github-Cli
+gh auth login
+
+
+

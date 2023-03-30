@@ -1,0 +1,18 @@
+# Ignore Everything
+*
+!*/
+
+# Except these files
+!/.gitignore
+!/.gitconfig
+!/.zshrc
+
+# Except these files in directories
+!/.config/setup/ericarch.sh
+!/.config/setup/packages.txt
+!/.config/foot/foot.ini
+!/.config/gtk-3.0/settings.ini
+!/.config/sway/config
+!/.config/systemd/user/rclone@.service
+!/.config/Thunar/uca.xml
+!/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
