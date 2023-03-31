@@ -38,5 +38,8 @@ systemctl --user enable --now rclone@Drive
 # Setup Github-Cli
 gh auth login
 
-
-
+# Final Steps
+cd ~
+rm -rf ~/dotfiles
+rm -rf ~/paru
+mkdir projects
