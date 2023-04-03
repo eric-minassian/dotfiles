@@ -29,7 +29,6 @@ google-chrome
 discord
 libreoffice-fresh
 spotify
-thunar
 ttf-jetbrains-mono-nerd
 visual-studio-code-bin
 vlc
@@ -40,3 +39,8 @@ virt-manager
 qemu-desktop
 dnsmasq
 fuse2
+tor-browser
+jre
+pcmanfm-gtk3
+gvfs
+sshfs
