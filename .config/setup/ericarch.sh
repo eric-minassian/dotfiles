@@ -12,7 +12,12 @@ makepkg -si --noconfirm
 
 # Install Packages
 cd ~/dotfiles/.config/setup
-paru -Sy --needed --noconfirm - < packages.txt
+
+# Clean Packages.txt
+cp packages.sh packages-clean.txt
+sed -i '/^#/d;/^$/d' packages-clean.txt
+
+paru -Sy --needed --noconfirm - < packages-clean.txt
 
 # Setup Shell
 chsh -s /bin/zsh
