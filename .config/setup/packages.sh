@@ -14,6 +14,7 @@ vlc
 zoom
 qbittorrent
 speedtest-cli
+insync
 
 # Desktop Environment
 swaybg
@@ -38,7 +39,7 @@ gnome-keyring
 visual-studio-code-bin
 python-virtualenv
 nodejs
-npm
+pnpm
 
 # System Tools
 neofetch
@@ -52,10 +53,6 @@ ttf-jetbrains-mono-nerd
 virt-manager
 qemu-desktop
 dnsmasq
-
-# Rclone (Google Drive)
-fuse2
-rclone
 
 # File Manager
 pcmanfm-gtk3

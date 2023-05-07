@@ -39,15 +39,16 @@ case $OSTYPE in
 
         # Load Plugins
         source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    	source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+        source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 	;;
     linux*)
         # Linux
 
         # Aliases
+	alias anyconnect="/opt/cisco/anyconnect/bin/vpnui"
 
         # Load Plugins
         source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	      source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     ;;
 esac
