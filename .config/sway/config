@@ -44,6 +44,10 @@ default_floating_border pixel 1
 # titlebar_padding 1
 # titlebar_border_thickness 0
 
+# Autostart
+exec insync start
+
+
 ### Idle configuration
 #
 # Example configuration:
@@ -84,6 +88,9 @@ exec swayidle -w \
 
     # Start your launcher
     bindsym $mod+r exec $menu
+
+    # Custom
+    bindsym $mod+b exec firefox
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -227,17 +234,18 @@ exec swayidle -w \
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    swaybar_command waybar
+    #position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #000000
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    #colors {
+    #    statusline #ffffff
+    #    background #000000
+    #    inactive_workspace #32323200 #32323200 #5c5c5c
+    #}
 }
 
 include /etc/sway/config.d/*
