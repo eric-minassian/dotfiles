@@ -4,7 +4,6 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 
 # Desktop Applications
-brave-bin
 firefox
 google-chrome
 discord
@@ -39,7 +38,9 @@ gnome-keyring
 visual-studio-code-bin
 python-virtualenv
 nodejs
-pnpm
+pnpm-bin
+docker
+docker-compose
 
 # System Tools
 neofetch

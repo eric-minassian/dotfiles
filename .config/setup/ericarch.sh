@@ -25,6 +25,10 @@ chsh -s /bin/zsh
 # Setup CUPS
 sudo systemctl enable --now cups.service
 
+# Setup Docker
+sudo systemctl enable --now docker.service
+sudo usermod -aG docker $USER
+
 # Setup Virtmanager
 paru -S iptables-nft
 sudo systemctl enable --now libvirtd.service
@@ -34,11 +38,6 @@ sudo sed -i 's/^#unix_sock_rw_perms = .*/unix_sock_rw_perms = "0770"/' /etc/libv
 sudo sed -i "s/#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
 sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.conf
 
-# Setup RClone
-cd ~
-mkdir Drive
-rclone config create Drive drive
-systemctl --user enable --now rclone@Drive
 
 # Setup Github-Cli
 gh auth login

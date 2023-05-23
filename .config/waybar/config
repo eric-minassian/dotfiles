@@ -1,7 +1,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -9,11 +9,11 @@
     // "modules-center": ["sway/window"],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     "modules-left": ["sway/workspaces", "sway/scratchpad"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["keyboard-state", "pulseaudio", "cpu", "memory", "clock", "custom/media", "tray"],
+    // "modules-center": ["sway/window"],
+    "modules-right": ["custom/media", "pulseaudio", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
-        "disable-scroll": true,
+        "disable-scroll": true
     //     "all-outputs": true,
         // "format": "{name}: {icon}",
         // "format-icons": {
@@ -85,6 +85,7 @@
     },
     "clock": {
         // "timezone": "America/Los_Angeles",
+        "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -165,7 +166,6 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "escape": true,
-        "exec": "python $HOME/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "python $HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify 2> /dev/null" // Script in resources folder
     }
 }
