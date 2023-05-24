@@ -59,3 +59,4 @@ dnsmasq
 pcmanfm-gtk3
 gvfs
 sshfs
+file-roller
