@@ -38,7 +38,7 @@ gnome-keyring
 visual-studio-code-bin
 python-virtualenv
 nodejs
-pnpm-bin
+pnpm
 docker
 docker-compose
 

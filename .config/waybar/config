@@ -86,8 +86,8 @@
     "clock": {
         // "timezone": "America/Los_Angeles",
         "format": "{:%I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%m-%d-%Y}"
     },
     "cpu": {
         "format": "{usage}% ",

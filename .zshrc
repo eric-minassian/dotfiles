@@ -48,6 +48,6 @@ case $OSTYPE in
 	alias anyconnect="/opt/cisco/anyconnect/bin/vpnui"
         # Load Plugins
         source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-	      source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     ;;
 esac
