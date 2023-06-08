@@ -12,7 +12,6 @@ spotify
 vlc
 zoom
 qbittorrent
-speedtest-cli
 insync
 
 # Desktop Environment
