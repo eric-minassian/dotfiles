@@ -55,7 +55,8 @@ qemu-desktop
 dnsmasq
 
 # File Manager
-pcmanfm-gtk3
+thunar
 gvfs
+thunar-volman
 sshfs
 file-roller

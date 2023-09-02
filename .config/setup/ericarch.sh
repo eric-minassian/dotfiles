@@ -40,7 +40,7 @@ sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.c
 
 
 # Setup Github-Cli
-gh auth login
+# gh auth login
 
 # Final Steps
 cd ~

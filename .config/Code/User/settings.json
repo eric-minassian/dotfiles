@@ -1,0 +1,82 @@
+{
+  // General
+  "telemetry.telemetryLevel": "off",
+  "workbench.startupEditor": "none",
+  "editor.inlineSuggest.enabled": true,
+  "extensions.ignoreRecommendations": true,
+  // Format on Save
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  // CPP
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "C_Cpp.autocomplete": "default",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.intelliSenseUpdateDelay": 1000,
+  // Python
+  "python.analysis.typeCheckingMode": "basic",
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": ["--max-line-length=200"],
+  "python.formatting.provider": "black",
+  // Django Files
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  // Remote Devices
+  "remote.SSH.remotePlatform": {
+    "openlab.ics.uci.edu": "linux",
+    "circinus-8.ics.uci.edu": "linux"
+  },
+  // Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false,
+    "mips": false,
+    "cpp": true,
+    "rust": true,
+    "c": true,
+    "python": true,
+    "typescriptreact": true
+  },
+  "python.defaultInterpreterPath": "/opt/homebrew/Cellar/python@3.11/3.11.1/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+
+  // Set Font
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+
+  // Default Formatter
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.enableFiletypes": ["astro"]
+}
