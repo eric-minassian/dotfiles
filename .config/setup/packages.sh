@@ -22,6 +22,8 @@ swaylock
 waybar
 xorg-xwayland
 xdg-utils
+xdg-desktop-portal-wlr
+xdg-desktop-portal
 
 # Terminal Applications
 bemenu-wayland
