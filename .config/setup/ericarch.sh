@@ -42,6 +42,8 @@ sudo sed -i 's/^#unix_sock_rw_perms = .*/unix_sock_rw_perms = "0770"/' /etc/libv
 sudo sed -i "s/#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
 sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.conf
 
+# Setup Pipewire
+systemctl enable --user pipewire-pulse.service
 
 # Setup Github-Cli
 # gh auth login

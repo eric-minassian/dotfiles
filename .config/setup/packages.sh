@@ -15,6 +15,7 @@ qbittorrent
 insync
 
 # Desktop Environment
+sway
 swaybg
 sway-audio-idle-inhibit-git
 swayidle
@@ -24,10 +25,17 @@ xorg-xwayland
 xdg-utils
 xdg-desktop-portal-wlr
 xdg-desktop-portal
-
-# Terminal Applications
 bemenu-wayland
 foot
+
+# Audio
+pavucontrol
+pipewire
+pipewire-alsa
+pipewire-pulse
+gst-plugin-pipewire
+libpulse
+wireplumber
 
 # Printing Support
 cups
