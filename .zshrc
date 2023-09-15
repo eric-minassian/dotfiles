@@ -35,7 +35,7 @@ compinit
 
 #setopt PROMPT_SUBST
 #PROMPT='%B%F{cyan}%~%f %F{green}${vcs_info_msg_0_}>%f%b '
-PROMPT='%B%F{blue}%~%f %F{green}>%f%b '
+PROMPT='%B%~ $%b '
 
 # Aliases
 alias ls="ls --color"
