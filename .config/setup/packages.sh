@@ -42,6 +42,7 @@ nodejs
 pnpm
 docker
 docker-compose
+rustup
 
 # System Tools
 neofetch

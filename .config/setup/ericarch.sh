@@ -4,6 +4,10 @@
 cd ~
 cp -rT ~/dotfiles ~
 
+# Install RUST for Paru
+sudo pacman -Sy --needed --noconfirm rustup
+rustup default stable
+
 # Setup AUR Helper (Paru)
 cd ~
 git clone https://aur.archlinux.org/paru.git
