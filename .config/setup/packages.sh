@@ -37,6 +37,13 @@ gst-plugin-pipewire
 libpulse
 wireplumber
 
+# Graphics
+libva-mesa-driver
+mesa
+vulkan-radeon
+xf86-video-amdgpu
+xf86-video-ati
+
 # Printing Support
 cups
 brother-hll2395dw
@@ -59,6 +66,14 @@ wget
 unzip
 wget
 ttf-jetbrains-mono-nerd
+nano
+vim
+openssh
+iwd
+wireless_tools
+wpa_supplicant
+smartmontools
+xdg-utils
 
 # Virtualization
 virt-manager
