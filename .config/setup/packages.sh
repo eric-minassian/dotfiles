@@ -74,6 +74,7 @@ wireless_tools
 wpa_supplicant
 smartmontools
 xdg-utils
+less
 
 # Virtualization
 virt-manager
