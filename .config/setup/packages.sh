@@ -88,3 +88,5 @@ thunar-volman
 sshfs
 file-roller
 tumbler
+ffmpegthumbnailer
+
