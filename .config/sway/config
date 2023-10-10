@@ -22,6 +22,9 @@ set $term foot
 #set $menu wofi --show run
 set $menu bemenu-run
 
+set $browser firefox
+set $files thunar
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -46,7 +49,7 @@ default_floating_border pixel 1
 
 # Autostart
 exec insync start
-
+exec redshift -l 34.0549:-118.2426
 
 ### Idle configuration
 #
@@ -90,7 +93,8 @@ exec swayidle -w \
     bindsym $mod+r exec $menu
 
     # Custom
-    bindsym $mod+b exec firefox
+    bindsym $mod+b exec $browser
+    bindsym $mod+e exec $files
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
