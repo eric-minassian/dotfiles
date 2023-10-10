@@ -21,6 +21,9 @@ cd ~/dotfiles/.config/setup
 cp packages.sh packages-clean.txt
 sed -i '/^#/d;/^$/d' packages-clean.txt
 
+# Setup pacman.conf
+sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+
 paru -Sy --needed --noconfirm - < packages-clean.txt
 
 # Setup Shell
