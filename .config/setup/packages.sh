@@ -10,6 +10,7 @@ discord
 libreoffice-fresh
 spotify
 vlc
+imv
 zoom
 qbittorrent
 insync
