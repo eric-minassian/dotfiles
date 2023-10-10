@@ -9,7 +9,7 @@ google-chrome
 discord
 libreoffice-fresh
 spotify
-vlc
+mpv
 imv
 zoom
 qbittorrent
