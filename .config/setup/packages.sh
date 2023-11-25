@@ -25,6 +25,7 @@ waybar
 xorg-xwayland
 xdg-utils
 xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
 xdg-desktop-portal
 bemenu-wayland
 foot
@@ -50,6 +51,7 @@ cups
 brother-hll2395dw
 
 # Dev Tools
+vercel
 github-cli
 gnome-keyring
 visual-studio-code-bin
@@ -91,3 +93,5 @@ file-roller
 tumbler
 ffmpegthumbnailer
 
+# LaTex
+texlive-basic
