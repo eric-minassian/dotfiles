@@ -33,8 +33,8 @@ chsh -s /bin/zsh
 sudo systemctl enable --now cups.service
 
 # Setup Docker
-#sudo systemctl enable --now docker.service
-#sudo usermod -aG docker $USER
+sudo systemctl enable --now docker.service
+sudo usermod -aG docker $USER
 
 # Setup Virtmanager
 paru -S iptables-nft
