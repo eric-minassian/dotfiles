@@ -95,3 +95,6 @@ ffmpegthumbnailer
 
 # LaTex
 texlive-basic
+perl-file-homedir
+perl-yaml-tiny
+
