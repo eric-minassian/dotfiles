@@ -33,7 +33,7 @@ chsh -s /bin/zsh
 sudo systemctl enable --now cups.service
 
 # Setup Docker
-sudo systemctl enable --now docker.service
+sudo systemctl enable --now docker.socket
 sudo usermod -aG docker $USER
 
 # Setup Virtmanager
