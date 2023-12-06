@@ -44,14 +44,15 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "yaml": false,
+    "yaml": true,
     "mips": false,
     "cpp": true,
     "rust": true,
     "c": true,
     "python": true,
     "typescriptreact": true,
-    "latex": true
+    "latex": false,
+    "typescript": true
   },
 
   // Set Font
@@ -82,5 +83,9 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.commandCenter": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "githubPullRequests.pullBranch": "never",
+  "typescript.inlayHints.parameterNames.enabled": "all"
 }
