@@ -9,7 +9,7 @@
   "editor.formatOnSaveMode": "file",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   // CPP
   "C_Cpp.default.cppStandard": "c++17",
@@ -28,7 +28,8 @@
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.html": "html"
   },
   "emmet.includeLanguages": {
     "django-html": "html"
@@ -87,5 +88,6 @@
   "window.commandCenter": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "githubPullRequests.pullBranch": "never",
-  "typescript.inlayHints.parameterNames.enabled": "all"
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "explorer.confirmDelete": false
 }
