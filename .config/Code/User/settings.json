@@ -20,6 +20,7 @@
   "C_Cpp.intelliSenseUpdateDelay": 1000,
   // Python
   "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
   "python.linting.enabled": true,
   "python.linting.pylintArgs": ["--max-line-length=200"],
   "python.formatting.provider": "black",

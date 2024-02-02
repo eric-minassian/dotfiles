@@ -63,6 +63,7 @@ docker-compose
 rustup
 
 # System Tools
+stow
 neofetch
 htop
 wget

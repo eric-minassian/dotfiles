@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Move Dotfiles to Homefolder
-cd ~
-cp -rT ~/dotfiles ~
-
 # Install RUST for Paru
 sudo pacman -Sy --needed --noconfirm rustup
 rustup default stable
@@ -52,7 +48,8 @@ systemctl enable --user pipewire-pulse.service
 # gh auth login
 
 # Final Steps
+cd ~/dotfiles
+stow .
 cd ~
-rm -rf ~/dotfiles
 rm -rf ~/paru
 mkdir projects
