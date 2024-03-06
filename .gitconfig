@@ -1,7 +1,9 @@
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+helper = !/usr/bin/gh auth git-credential
+
 [user]
-	name = Eric Minassian
-	email = eric@ericminassian.com
+name = Eric Minassian
+email = eric@ericminassian.com
