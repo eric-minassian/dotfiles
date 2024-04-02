@@ -54,7 +54,8 @@
     "python": true,
     "typescriptreact": true,
     "latex": false,
-    "typescript": true
+    "typescript": true,
+    "sql": true
   },
 
   // Set Font
@@ -85,10 +86,17 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[sql]": {
+    "editor.formatOnSave": false
+  },
   "security.workspace.trust.untrustedFiles": "open",
   "window.commandCenter": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "githubPullRequests.pullBranch": "never",
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "notebook.output.textLineLimit": 100,
+  "workbench.editorAssociations": {
+    "*.pdf": "default"
+  }
 }

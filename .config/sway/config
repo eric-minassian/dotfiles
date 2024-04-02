@@ -49,7 +49,7 @@ default_floating_border pixel 1
 
 # Autostart
 exec insync start
-exec redshift -l 34.0549:-118.2426
+# exec redshift -l 34.0549:-118.2426
 
 # Media Bindings
 bindsym XF86AudioPrev exec playerctl previous
@@ -61,12 +61,17 @@ bindsym XF86AudioPlay exec playerctl play-pause
 #
 # Example configuration:
 #
-#exec sway-audio-idle-inhibit
+# exec sway-audio-idle-inhibit
 #exec swayidle -w \
 #         timeout 300 'swaylock -f -c 000000' \
 #         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #         before-sleep 'swaylock -f -c 000000'
-#
+
+# exec swayidle -w \
+#     timeout 10 'xmrig -o 192.168.50.250:3333' \
+#     after-resume 'killall xmrig'
+    
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.

@@ -4,7 +4,7 @@ darwin*)
     ;;
 linux*)
     if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-        exec sway
+        exec dbus-run-session sway
     fi
     ;;
 esac

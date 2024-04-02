@@ -80,10 +80,6 @@ smartmontools
 xdg-utils
 less
 
-# Virtualization
-virt-manager
-qemu-desktop
-dnsmasq
 
 # File Manager
 thunar

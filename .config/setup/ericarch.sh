@@ -1,55 +1,83 @@
 #!/bin/bash
 
-# Install RUST for Paru
-sudo pacman -Sy --needed --noconfirm rustup
-rustup default stable
+install_packages() {
+	# Install AUR Helper (Paru)
+	sudo pacman -Sy --need --noconfirm rustup
+	rustup default stable
+	cd ~
+	git clone https://aur.archlinux.org/paru.git
+	cd paru
+	makepkg -si --noconfirm
+	
+	# Install Packages
+	cd ~/dotfiles/.config/setup
+	cp packages.sh packages-clean.txt
+	sed -i '/^#/d;/^$/d' packages-clean.txt
+	paru -Sy --needed --noconfirm - < packages-clean.txt
+}
 
-# Setup AUR Helper (Paru)
-cd ~
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si --noconfirm
+configure_shell() {
+	chsh -s /bin/zsh
+}
 
-# Install Packages
-cd ~/dotfiles/.config/setup
+configure_cups() {
+	sudo systemctl enable --now cups.service
+}
 
-# Clean Packages.txt
-cp packages.sh packages-clean.txt
-sed -i '/^#/d;/^$/d' packages-clean.txt
+configure_docker() {
+	sudo systemctl enable --now docker.socket
+	sudo usermod -aG docker $USER
+}
 
-# Setup pacman.conf
-sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+configure_virtmanager() {
+	paru -S iptables-nft virt-manager qemu-desktop dnsmasq --noconfirm
+	sudo systemctl enable --now libvirtd.service
+	sudo usermod -aG libvirt $USER
+	sudo sed -i 's/^#unix_sock_group = .*/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
+	sudo sed -i 's/^#unix_sock_rw_perms = .*/unix_sock_rw_perms = "0770"/' /etc/libvirt/libvirtd.conf
+	sudo sed -i "s/#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
+	sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.conf
+}
 
-paru -Sy --needed --noconfirm - < packages-clean.txt
+configure_pipewire() {
+	systemctl enable --user pipewire-pulse.service
+}
 
-# Setup Shell
-chsh -s /bin/zsh
+configure_ui() {
+	sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+}
 
-# Setup CUPS
-sudo systemctl enable --now cups.service
+cleanup() {
+	cd ~/dotfiles
+	stow .
+	cd ~
+	rm -rf ~/paru
+	mkdir projects
+}
 
-# Setup Docker
-sudo systemctl enable --now docker.socket
-sudo usermod -aG docker $USER
+main() {
+	read -p "Configure Docker? (y/n): " docker
+	read -p "Configure Virtualization? (y/n): " virt
 
-# Setup Virtmanager
-paru -S iptables-nft
-sudo systemctl enable --now libvirtd.service
-sudo usermod -aG libvirt $USER
-sudo sed -i 's/^#unix_sock_group = .*/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
-sudo sed -i 's/^#unix_sock_rw_perms = .*/unix_sock_rw_perms = "0770"/' /etc/libvirt/libvirtd.conf
-sudo sed -i "s/#user = \"libvirt-qemu\"/user = \"$USER\"/" /etc/libvirt/qemu.conf
-sudo sed -i "s/#group = \"libvirt-qemu\"/group = \"$USER\"/" /etc/libvirt/qemu.conf
 
-# Setup Pipewire
-systemctl enable --user pipewire-pulse.service
+	install_packages
+	configure_shell
+	configure_cups
 
-# Setup Github-Cli
-# gh auth login
+	if [ "$docker" == "y" ]; then
+		configure_docker
+	fi
 
-# Final Steps
-cd ~/dotfiles
-stow .
-cd ~
-rm -rf ~/paru
-mkdir projects
+	if [ "$virt" == "y" ]; then
+		configure_virtmanager
+	fi
+
+	configure_pipewire
+	configure_ui
+	cleanup
+}
+
+main
+
+

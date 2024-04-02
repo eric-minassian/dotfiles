@@ -27,7 +27,7 @@ PROMPT='%B%~ $%b '
 alias ls="ls --color"
 alias ll="ls --color -la"
 alias c="clear"
-alias env="virtualenv env"
+alias venv="virtualenv env"
 alias activate="source env/bin/activate"
 
 case $OSTYPE in
@@ -44,8 +44,12 @@ darwin*)
 linux*)
     # Linux
 
+    # Conda
+    [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh	
+
     # Aliases
-    alias anyconnect="/opt/cisco/anyconnect/bin/vpnui"
+    alias open="xdg-open"
+
     # Load Plugins
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
