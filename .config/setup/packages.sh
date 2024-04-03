@@ -8,7 +8,7 @@ firefox
 google-chrome
 discord
 libreoffice-fresh
-spotify
+# spotify
 mpv
 imv
 zoom

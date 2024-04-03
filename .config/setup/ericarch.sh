@@ -30,7 +30,7 @@ configure_docker() {
 }
 
 configure_virtmanager() {
-	paru -S iptables-nft virt-manager qemu-desktop dnsmasq --noconfirm
+	paru -S iptables-nft virt-manager qemu-desktop dnsmasq
 	sudo systemctl enable --now libvirtd.service
 	sudo usermod -aG libvirt $USER
 	sudo sed -i 's/^#unix_sock_group = .*/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
