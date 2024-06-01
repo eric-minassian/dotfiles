@@ -27,8 +27,8 @@ PROMPT='%B%~ $%b '
 alias ls="ls --color"
 alias ll="ls --color -la"
 alias c="clear"
-alias venv="virtualenv env"
-alias activate="source env/bin/activate"
+alias venv="virtualenv .venv"
+alias activate="source .venv/bin/activate"
 
 case $OSTYPE in
 darwin*)

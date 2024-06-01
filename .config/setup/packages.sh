@@ -8,7 +8,7 @@ firefox
 google-chrome
 discord
 libreoffice-fresh
-# spotify
+spotify-launcher
 mpv
 imv
 zoom
@@ -18,9 +18,6 @@ insync
 # Desktop Environment
 sway
 swaybg
-sway-audio-idle-inhibit-git
-swayidle
-swaylock
 waybar
 xorg-xwayland
 xdg-utils

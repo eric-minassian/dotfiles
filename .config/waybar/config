@@ -163,9 +163,10 @@
       "spotify": "",
       "default": "🎜"
     },
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    // Filter for spotify first and then default
+    "on-click": "playerctl --player=spotify,%any play-pause",
+    "on-scroll-up": "playerctl --player=spotify,%any next",
+    "on-scroll-down": "playerctl --player=spotify,%any previous",
     "escape": true,
     "exec": "python $HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify 2> /dev/null" // Script in resources folder
   }
