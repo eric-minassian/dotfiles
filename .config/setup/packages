@@ -4,8 +4,7 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 
 # Desktop Applications
-firefox
-google-chrome
+chromium
 discord
 libreoffice-fresh
 spotify-launcher
@@ -26,6 +25,8 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal
 bemenu-wayland
 foot
+swayidle
+sway-audio-idle-inhibit-git
 
 # Audio
 pavucontrol

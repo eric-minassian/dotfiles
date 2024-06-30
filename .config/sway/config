@@ -22,7 +22,7 @@ set $term foot
 #set $menu wofi --show run
 set $menu bemenu-run
 
-set $browser firefox
+set $browser chromium
 set $files thunar
 
 ### Output configuration
@@ -56,16 +56,21 @@ bindsym XF86AudioPrev exec 'playerctl --player=spotify,%any previous'
 bindsym XF86AudioNext exec 'playerctl --player=spotify,%any next'
 bindsym XF86AudioPlay exec 'playerctl --player=spotify,%any play-pause'
 
+# Volume Bindings
+bindsym XF86AudioRaiseVolume exec 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+bindsym XF86AudioLowerVolume exec 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+bindsym XF86AudioMute exec 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec sway-audio-idle-inhibit
-#exec swayidle -w \
-#         timeout 300 'swaylock -f -c 000000' \
-#         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#         before-sleep 'swaylock -f -c 000000'
+exec sway-audio-idle-inhibit
+exec swayidle -w \
+        timeout 300 'swaylock -f -c 000000' \
+        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        before-sleep 'swaylock -f -c 000000'
 
 # exec swayidle -w \
 #     timeout 10 'xmrig -o 192.168.50.250:3333' \

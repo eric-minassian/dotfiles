@@ -11,7 +11,7 @@ install_packages() {
 	
 	# Install Packages
 	cd ~/dotfiles/.config/setup
-	cp packages.sh packages-clean.txt
+	cp packages packages-clean.txt
 	sed -i '/^#/d;/^$/d' packages-clean.txt
 	cd ~
 	paru -Sy --needed --noconfirm - < dotfiles/.config/setup/packages-clean.txt
