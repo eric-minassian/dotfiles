@@ -22,7 +22,7 @@ set $term foot
 #set $menu wofi --show run
 set $menu bemenu-run
 
-set $browser chromium
+set $browser firefox
 set $files thunar
 
 ### Output configuration
@@ -112,6 +112,9 @@ exec swayidle -w \
     bindsym $mod+b exec $browser
     bindsym $mod+e exec $files
 
+    # Lock the screen
+    bindsym $mod+Shift+l exec swaylock -f -c 000000
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -139,10 +142,10 @@ exec swayidle -w \
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    # bindsym $mod+Shift+$left move left
+    # bindsym $mod+Shift+$down move down
+    # bindsym $mod+Shift+$up move up
+    # bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
