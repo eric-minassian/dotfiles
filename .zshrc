@@ -44,9 +44,6 @@ darwin*)
 linux*)
     # Linux
 
-    # Conda
-    [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh	
-
     # Aliases
     alias open="xdg-open"
 

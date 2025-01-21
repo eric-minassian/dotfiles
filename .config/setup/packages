@@ -4,26 +4,24 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 
 # Desktop Applications
-chromium
+firefox
 discord
 libreoffice-fresh
 spotify-launcher
 mpv
 imv
-zoom
 qbittorrent
 insync
 
 # Desktop Environment
 sway
-swaybg
-waybar
+i3status-rust
 xorg-xwayland
 xdg-utils
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
 xdg-desktop-portal
-bemenu-wayland
+dmenu
 foot
 swayidle
 sway-audio-idle-inhibit-git
@@ -49,7 +47,6 @@ cups
 brother-hll2395dw
 
 # Dev Tools
-vercel
 github-cli
 gnome-keyring
 visual-studio-code-bin
@@ -87,9 +84,4 @@ sshfs
 file-roller
 tumbler
 ffmpegthumbnailer
-
-# LaTex
-texlive-basic
-perl-file-homedir
-perl-yaml-tiny
 

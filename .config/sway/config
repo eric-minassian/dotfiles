@@ -18,9 +18,9 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
-#set $menu wofi --show run
-set $menu bemenu-run
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu wofi --show run
+# set $menu bemenu-run
 
 set $browser firefox
 set $files thunar
@@ -258,12 +258,8 @@ exec swayidle -w \
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
-    #position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    position top
+    status_command /usr/bin/i3status-rs /home/eric/.config/i3status-rust/config.toml
 
     #colors {
     #    statusline #ffffff

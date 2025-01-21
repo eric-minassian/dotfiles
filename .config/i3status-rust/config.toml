@@ -1,0 +1,32 @@
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "music"
+format = "{$combo.str(max_w:25,rot_interval:0.5) $play |}"
+player = "spotify"
+[[block.click]]
+button = "left"
+action = "play_pause"
+[[block.click]]
+button = "up"
+action = "next"
+[[block.click]]
+button = "down"
+action = "prev"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "sound"
+device_kind = "source"
+format = " $icon {$volume.eng(w:2) |}"
+
+[[block]]
+block = "time"
+format = " $timestamp.datetime(f:'%D %I:%M %p') "
+
