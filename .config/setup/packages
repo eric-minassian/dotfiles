@@ -12,6 +12,9 @@ mpv
 imv
 qbittorrent
 insync
+mullvad-vpn-bin
+brave-bin
+yt-dlp
 
 # Desktop Environment
 sway
@@ -21,8 +24,9 @@ xdg-utils
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
 xdg-desktop-portal
-dmenu
+tofi
 foot
+swaylock
 swayidle
 sway-audio-idle-inhibit-git
 
