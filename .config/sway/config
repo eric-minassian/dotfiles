@@ -20,8 +20,8 @@ set $term foot
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # set $menu wofi --show run
-# set $menu bemenu-run
-set $menu tofi-drun | xargs swaymsg exec --
+set $menu bemenu-run
+# set $menu tofi-drun | xargs swaymsg exec --
 
 set $browser firefox
 set $files thunar

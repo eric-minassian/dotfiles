@@ -24,7 +24,7 @@ xdg-utils
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
 xdg-desktop-portal
-tofi
+bemenu-wayland
 foot
 swaylock
 swayidle
