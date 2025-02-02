@@ -5,6 +5,7 @@ zsh-syntax-highlighting
 
 # Desktop Applications
 firefox
+google-chrome
 discord
 libreoffice-fresh
 spotify-launcher
@@ -12,8 +13,6 @@ mpv
 imv
 qbittorrent
 insync
-mullvad-vpn-bin
-brave-bin
 yt-dlp
 
 # Desktop Environment
@@ -60,6 +59,8 @@ pnpm
 docker
 docker-compose
 rustup
+cargo-lambda-bin
+aws-cli-v2
 
 # System Tools
 stow
